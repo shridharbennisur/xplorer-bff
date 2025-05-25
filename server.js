@@ -13,6 +13,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => res.send("health checkup"));
+
 app.use('/api/entries', moneyEntryRoutes);
 app.use('/api/sources', moneySourceRoutes);
 
